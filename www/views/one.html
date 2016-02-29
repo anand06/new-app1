@@ -1,0 +1,65 @@
+<ion-view view-title="Bluecross" cache-view="true" enable-menu-with-back-views="false">
+ <ion-nav-buttons side="left">
+      <button  class="button icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button  class="button icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <ion-content scroll="true" >
+   
+     <span>
+     <select ng-model="sort.type" style="padding:5px; margin-top:6px;">
+              <option value="" selected>show all</option>
+              <option value="dog">show dog</option>
+              <option value="cat">show cat</option>
+              <option value="lion">show lion</option>
+            </select> 
+    </span> 
+     <div class="card" ng-click="openModal(animal)" ng-repeat="animal in animals | filter : sort track by $index">
+        <div class="item item-text-wrap ">
+          <div class="row row-center photomargin">
+            <div class="col col-50 imgscr ">
+              <img class="popimg imgsize" ng-src="{{animal.image}}" ></div>
+             <div class="col col-50" style="margin-left: 50px;">{{animal.name}}</div>
+             <button ng-click="toggleModal('Success')" class="btn btn-default">Success</button>
+          </div>
+         </div>
+       </div>
+   
+ 
+
+ 
+ 
+   
+
+  </ion-content>
+  <script id="animal-modal.html" type="text/ng-template">
+ 
+
+    <ion-modal-view>
+      <ion-nav-bar>
+        <ion-nav-buttons side="left">
+          <button class="button button-clear button-block button-positive" on-tap="closeModal()" >  
+            <i class="ion-arrow-left-c"> </i>
+          </button> 
+          <span class="wordsize">{{animalmodal.name}}</span>
+        </ion-nav-buttons> 
+      </ion-nav-bar>
+      
+
+      <ion-content class="has-header">
+      
+        
+        <div>
+       <img class="popimg" ng-src="{{animalmodal.image}}" style="margin-top: 20px;">
+       
+       </div>
+       <span>{{animalmodal.desc}}</span>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</ion-view>

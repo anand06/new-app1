@@ -1,0 +1,37 @@
+/* Empty. Add your own CSS if you like */
+.highlight{
+	color: #4a87ee;
+}
+.lite{
+	color:#C0C0C0;
+}
+.ovr{
+	border-radius:40px;
+}
+.insideclr{
+	color: 	#000000;
+}
+.homebg {
+	background: url(http://www.clker.com/cliparts/r/q/q/j/k/q/blue-cross.svg);
+}
+.imgscr{
+	width:30%;
+}
+.imgsize{
+	width: 100%;
+    height: 100px;
+
+}
+.photomargin{
+	margin-left: -25px;
+    margin-bottom: -30px;
+    margin-top: -25px;
+}
+.popimg{
+	width: 100%;
+}
+.wordsize{
+	font-size: 20px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
